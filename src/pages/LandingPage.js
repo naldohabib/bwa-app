@@ -4,6 +4,8 @@ import Header from "part/Header";
 import Hero from "part/Hero";
 import MostPicked from "part/MostPicked";
 import Categories from 'part/Categories'
+import Testimony from 'part/Testimony'
+import Footer from 'part/Footer'
 
 import landingPage from "json/landingPage.json";
 export default class LandingPage extends Component {
@@ -15,13 +17,15 @@ export default class LandingPage extends Component {
   render() {
     return (
       <>
-        <Header {...this.props}></Header>
+        <Header {...this.props}></Header> 
         <Hero refMostPicked={this.refMostPicked} data={landingPage.hero} />
         <MostPicked
           refMostPicked={this.refMostPicked}
           data={landingPage.mostPicked}
         />
         <Categories data={landingPage.categories}/>
+        <Testimony data={landingPage.testimonial}/>
+        <Footer />
       </>
     );
   }
